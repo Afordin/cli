@@ -1,14 +1,32 @@
 {
-  "author": "Juan Pablo Barrera @juanpablo-is",
+  "name": "@afordin/cli",
+  "repository": "afordin/cli",
+  "description": "Afordin CLI",
+  "version": "0.0.0",
+  "keywords": [
+    "afordin",
+    "afordin-cli"
+  ],
+  "author": "Afordin <info@afordin.com> (https://afordin.com)",
+  "contributors":[
+    "Juan Pablo <juanpablo.is@outlook.com> (https://jotapeis.tech)"
+  ],
+  "type": "module",
+  "homepage": "https://github.com/afordin/cli",
+  "bugs": "https://github.com/afordin/cli/issues",
   "bin": {
     "afordin": "./bin/run.js"
   },
-  "dependencies": {
-    "@oclif/core": "^3",
-    "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^4"
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "prepare": "npm run build",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
   },
-  "description": "Afordin CLI",
   "devDependencies": {
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^3",
@@ -26,6 +44,11 @@
     "ts-node": "^10.9.1",
     "typescript": "^5"
   },
+  "dependencies": {
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^4"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -34,10 +57,6 @@
     "/dist",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/juanpablo-is/cli",
-  "license": "MIT",
-  "main": "",
-  "name": "@afordin/cli",
   "oclif": {
     "bin": "afordin",
     "dirname": "afordin",
@@ -47,21 +66,6 @@
       "@oclif/plugin-plugins"
     ]
   },
-  "repository": "juanpablo-is/cli",
-  "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
-    "prepare": "yarn build",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
-  },
-  "version": "0.0.0",
-  "bugs": "https://github.com/juanpablo-is/cli/issues",
-  "keywords": [],
   "types": "dist/index.d.ts",
-  "exports": "./lib/index.js",
-  "type": "module"
+  "exports": "./lib/index.js"
 }
