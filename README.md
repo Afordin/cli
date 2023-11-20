@@ -24,7 +24,7 @@ $ npm install -g @afordin/cli
 $ afordin COMMAND
 running command...
 $ afordin (--version)
-@afordin/cli/0.1.0-beta.3 win32-x64 node-v18.16.0
+@afordin/cli/0.1.0-beta.4 win32-x64 node-v18.16.0
 $ afordin --help [COMMAND]
 USAGE
   $ afordin COMMAND
@@ -84,7 +84,7 @@ DESCRIPTION
   Create scaffolding projects
 ```
 
-_See code: [dist/commands/create/index.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.3/dist/commands/create/index.ts)_
+_See code: [dist/commands/create/index.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.4/dist/commands/create/index.ts)_
 
 ## `afordin hello PERSON`
 
@@ -108,7 +108,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.3/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.4/dist/commands/hello/index.ts)_
 
 ## `afordin hello:world`
 
@@ -126,7 +126,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.3/dist/commands/hello/world.ts)_
+_See code: [dist/commands/hello/world.ts](https://github.com/afordin/cli/blob/v0.1.0-beta.4/dist/commands/hello/world.ts)_
 
 ## `afordin help [COMMANDS]`
 

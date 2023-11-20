@@ -17,6 +17,9 @@
   "bin": {
     "afordin": "./bin/run.js"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts",
