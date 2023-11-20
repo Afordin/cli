@@ -17,6 +17,15 @@
     "create-afordin": "index.js",
     "cain": "index.js"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "type": "module",
   "files": [
     "index.js",
