@@ -50,7 +50,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^4",
     "bumpp": "^9.2.0",
-    "@afordin/create": "workspace"
+    "@afordin/create": "workspace:latest"
   },
   "engines": {
     "node": ">=18.0.0"
