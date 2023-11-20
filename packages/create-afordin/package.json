@@ -1,0 +1,37 @@
+{
+  "name": "create-afordin",
+  "version": "0.0.0",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afordin/cli.git",
+    "directory": "packages/create-afordin"
+  },
+  "bugs": {
+    "url": "https://github.com/afordin/cli/issues"
+  },
+  "homepage": "https://github.com/afordin/cli#readme",
+  "bin": {
+    "create-afordin": "index.js",
+    "cain": "index.js"
+  },
+  "type": "module",
+  "files": [
+    "index.js",
+    "src/templates/**/*",
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.8",
+    "prompts": "^2.4.2",
+    "unbuild": "^2.0.0"
+  }
+}
