@@ -1,8 +1,8 @@
 import path, {resolve} from 'node:path'
 import fs from 'node:fs'
-
-import {DEFAULT_FOLDER} from './const'
 import {fileURLToPath} from 'node:url'
+
+import {DEFAULT_FOLDER} from './const.js'
 
 export function args () {
   return process.argv.slice(2).reduce(

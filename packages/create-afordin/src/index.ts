@@ -2,8 +2,8 @@ import {join, relative} from 'node:path'
 
 import prompts from 'prompts'
 
-import {DEFAULT_FOLDER} from './const'
-import {TEMPLATES, getPathTemplate} from './TEMPLATES'
+import {DEFAULT_FOLDER} from './const.js'
+import {TEMPLATES, getPathTemplate} from './TEMPLATES.js'
 import {
   args,
   catchify,
@@ -17,7 +17,7 @@ import {
   setNamePackaging,
   targetDirectory,
   writeFromFolder,
-} from './utils'
+} from './utils.js'
 
 console.clear()
 
@@ -101,20 +101,20 @@ async function resultPrompts () {
       },
       {
         type: prev => {
-          const getFramework = TEMPLATES.find(t => t.value === prev)
+          const getFramework = TEMPLATES.find((t: {value: string}) => t.value === prev)
           return getFramework && getFramework.variant ? 'select' : null
         },
         name: 'variant',
         message: '¿Que librería/framework de frontend?',
         initial: 0,
         choices: prev => {
-          const getFramework = TEMPLATES.find(t => t.value === prev)
+          const getFramework = TEMPLATES.find((t: {value: string}) => t.value === prev)
           return (getFramework && getFramework.variant) || []
         },
       },
       {
         type: (_, {framework, variant}) => {
-          const getFramework = TEMPLATES.find(t => t.value === framework)
+          const getFramework = TEMPLATES.find((t: {value: string}) => t.value === framework)
           if (!getFramework) return null
 
           if (getFramework.variant) {
@@ -128,7 +128,7 @@ async function resultPrompts () {
         message: '¿Que librería de diseño?',
         initial: 0,
         choices: (_, {framework, variant}) => {
-          const getFramework = TEMPLATES.find(t => t.value === framework)
+          const getFramework = TEMPLATES.find((t: {value: string}) => t.value === framework)
           if (!getFramework) return []
 
           if (getFramework.variant) {

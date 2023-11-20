@@ -45,19 +45,11 @@ importers:
 
   packages/create-afordin:
     specifiers:
-      '@types/minimist': ^1.2.5
       '@types/prompts': ^2.4.8
-      cross-spawn: ^7.0.3
-      kolorist: ^1.8.0
-      minimist: ^1.2.8
       prompts: ^2.4.2
       unbuild: ^2.0.0
     devDependencies:
-      '@types/minimist': 1.2.5
       '@types/prompts': 2.4.8
-      cross-spawn: 7.0.3
-      kolorist: 1.8.0
-      minimist: 1.2.8
       prompts: 2.4.2
       unbuild: 2.0.0_typescript@5.2.2
 
@@ -1326,10 +1318,6 @@ packages:
 
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
-    dev: true
-
-  /@types/minimist/1.2.5:
-    resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
     dev: true
 
   /@types/mocha/10.0.4:
@@ -4193,10 +4181,6 @@ packages:
   /kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
-    dev: true
-
-  /kolorist/1.8.0:
-    resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
     dev: true
 
   /levn/0.4.1:
