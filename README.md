@@ -21,7 +21,7 @@ $ npm install -g @afordin/cli
 $ afordin COMMAND
 running command...
 $ afordin (--version)
-@afordin/cli/0.0.0 win32-x64 node-v18.16.0
+@afordin/cli/0.1.0-beta.0 win32-x64 node-v18.16.0
 $ afordin --help [COMMAND]
 USAGE
   $ afordin COMMAND
@@ -42,8 +42,6 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`afordin hello PERSON`](#afordin-hello-person)
-* [`afordin hello world`](#afordin-hello-world)
 * [`afordin help [COMMANDS]`](#afordin-help-commands)
 * [`afordin plugins`](#afordin-plugins)
 * [`afordin plugins:install PLUGIN...`](#afordin-pluginsinstall-plugin)
@@ -51,52 +49,10 @@ USAGE
 * [`afordin plugins:install PLUGIN...`](#afordin-pluginsinstall-plugin-1)
 * [`afordin plugins:link PLUGIN`](#afordin-pluginslink-plugin)
 * [`afordin plugins:uninstall PLUGIN...`](#afordin-pluginsuninstall-plugin)
-* [`afordin plugins reset`](#afordin-plugins-reset)
+* [`afordin plugins:reset`](#afordin-pluginsreset)
 * [`afordin plugins:uninstall PLUGIN...`](#afordin-pluginsuninstall-plugin-1)
 * [`afordin plugins:uninstall PLUGIN...`](#afordin-pluginsuninstall-plugin-2)
-* [`afordin plugins update`](#afordin-plugins-update)
-
-## `afordin hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ afordin hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/juanpablo-is/cli/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `afordin hello world`
-
-Say hello world
-
-```
-USAGE
-  $ afordin hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ afordin hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [dist/commands/hello/world.ts](https://github.com/juanpablo-is/cli/blob/v0.0.0/dist/commands/hello/world.ts)_
+* [`afordin plugins:update`](#afordin-pluginsupdate)
 
 ## `afordin help [COMMANDS]`
 
@@ -139,7 +95,7 @@ EXAMPLES
   $ afordin plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/index.ts)_
 
 ## `afordin plugins:install PLUGIN...`
 
@@ -173,14 +129,14 @@ DESCRIPTION
 
 
 ALIASES
-  $ afordin plugins add
+  $ afordin plugins:add
 
 EXAMPLES
-  $ afordin plugins:install myplugin 
+  $ afordin plugins:add myplugin 
 
-  $ afordin plugins:install https://github.com/someuser/someplugin
+  $ afordin plugins:add https://github.com/someuser/someplugin
 
-  $ afordin plugins:install someuser/someplugin
+  $ afordin plugins:add someuser/someplugin
 ```
 
 ## `afordin plugins:inspect PLUGIN...`
@@ -208,7 +164,7 @@ EXAMPLES
   $ afordin plugins:inspect myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/inspect.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/inspect.ts)_
 
 ## `afordin plugins:install PLUGIN...`
 
@@ -242,7 +198,7 @@ DESCRIPTION
 
 
 ALIASES
-  $ afordin plugins add
+  $ afordin plugins:add
 
 EXAMPLES
   $ afordin plugins:install myplugin 
@@ -252,7 +208,7 @@ EXAMPLES
   $ afordin plugins:install someuser/someplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/install.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/install.ts)_
 
 ## `afordin plugins:link PLUGIN`
 
@@ -282,7 +238,7 @@ EXAMPLES
   $ afordin plugins:link myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/link.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/link.ts)_
 
 ## `afordin plugins:uninstall PLUGIN...`
 
@@ -303,20 +259,23 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ afordin plugins unlink
-  $ afordin plugins remove
+  $ afordin plugins:unlink
+  $ afordin plugins:remove
+
+EXAMPLES
+  $ afordin plugins:remove myplugin
 ```
 
-## `afordin plugins reset`
+## `afordin plugins:reset`
 
 Remove all user-installed and linked plugins.
 
 ```
 USAGE
-  $ afordin plugins reset
+  $ afordin plugins:reset
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/reset.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/reset.ts)_
 
 ## `afordin plugins:uninstall PLUGIN...`
 
@@ -337,11 +296,14 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ afordin plugins unlink
-  $ afordin plugins remove
+  $ afordin plugins:unlink
+  $ afordin plugins:remove
+
+EXAMPLES
+  $ afordin plugins:uninstall myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/uninstall.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/uninstall.ts)_
 
 ## `afordin plugins:uninstall PLUGIN...`
 
@@ -362,17 +324,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ afordin plugins unlink
-  $ afordin plugins remove
+  $ afordin plugins:unlink
+  $ afordin plugins:remove
+
+EXAMPLES
+  $ afordin plugins:unlink myplugin
 ```
 
-## `afordin plugins update`
+## `afordin plugins:update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ afordin plugins update [-h] [-v]
+  $ afordin plugins:update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
@@ -382,7 +347,7 @@ DESCRIPTION
   Update installed plugins.
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.5/lib/commands/plugins/update.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.8/lib/commands/plugins/update.ts)_
 <!-- commandsstop -->
 * [`oex hello PERSON`](#oex-hello-person)
 * [`oex hello world`](#oex-hello-world)
