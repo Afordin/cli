@@ -3,15 +3,14 @@
     "declaration": true,
     "module": "Node16",
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "strict": true,
     "skipLibCheck": true,
     "target": "es2022",
     "moduleResolution": "node16"
   },
   "include": [
-    "src/**/*",
-    "packages/**/*"
+    "src/**/*"
   ],
   "ts-node": {
     "esm": true

@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@afordin/create': workspace
       '@oclif/core': ^3
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^4
@@ -29,6 +30,7 @@ importers:
       '@oclif/plugin-plugins': 4.1.8_typescript@5.2.2
       bumpp: 9.2.0
     devDependencies:
+      '@afordin/create': link:packages/create-afordin
       '@oclif/prettier-config': 0.2.1
       '@oclif/test': 3.1.2_typescript@5.2.2
       '@types/chai': 4.3.10
