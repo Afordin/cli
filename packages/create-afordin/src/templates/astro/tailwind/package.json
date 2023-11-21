@@ -1,0 +1,17 @@
+{
+  "name": "@afordin/t-astro-tailwind",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.5.5",
+    "tailwindcss": "^3.0.24"
+  }
+}
