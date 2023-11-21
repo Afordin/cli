@@ -50,6 +50,11 @@ export const TEMPLATES = [
     title: 'NextJS',
     design: allDesigns,
   },
+  {
+    value: 'astro',
+    title: 'Astro',
+    design: allDesigns,
+  },
 ]
 
 export function getAllTemplates (item: any[], parentKey: string | undefined, defaultAcc: Array<string>): Array<string> {
