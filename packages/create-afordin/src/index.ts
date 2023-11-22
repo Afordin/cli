@@ -151,7 +151,7 @@ export function main () {
     const [error, results] = await catchify(prompt)
     if (error) throw new Error(error?.message || 'Se ha presentado un error, intente nuevamente')
 
-    results['project-name'] ||= TargetDirectory
+    results['project-name'] = results['project-name'] || TargetDirectory
     return results
   }
 
