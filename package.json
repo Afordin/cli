@@ -37,6 +37,7 @@
     "@types/chai": "^4",
     "@types/mocha": "^10",
     "@types/node": "^18",
+    "bumpp": "^9.2.0",
     "chai": "^4",
     "eslint": "^8",
     "eslint-config-oclif": "^5",
@@ -49,11 +50,10 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@afordin/create": "latest",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^4",
-    "bumpp": "^9.2.0",
-    "@afordin/create": "latest"
+    "@oclif/plugin-plugins": "^4"
   },
   "peerDependencies": {
     "@afordin/create": "latest"
