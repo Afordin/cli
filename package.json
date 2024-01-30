@@ -2,7 +2,7 @@
   "name": "@afordin/cli",
   "repository": "afordin/cli",
   "description": "Afordin CLI",
-  "version": "0.2.0-beta.0",
+  "version": "0.2.1-beta.0",
   "keywords": [
     "afordin",
     "afordin-cli"
@@ -50,13 +50,13 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@afordin/create": "latest",
+    "@afordin/create": "workspace:*",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^4"
   },
   "peerDependencies": {
-    "@afordin/create": "latest"
+    "@afordin/create": "workspace:*"
   },
   "engines": {
     "node": ">=18.0.0"
