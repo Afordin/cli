@@ -50,13 +50,13 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@afordin/create": "workspace:*",
+    "@afordin/create": "latest",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^4"
   },
   "peerDependencies": {
-    "@afordin/create": "workspace:*"
+    "@afordin/create": "latest"
   },
   "engines": {
     "node": ">=18.0.0"
