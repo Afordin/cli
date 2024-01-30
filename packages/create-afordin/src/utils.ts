@@ -159,6 +159,14 @@ export function writeFile ({
   } else {
     copy(path.join(directory, file), targetPath)
   }
+
+  if (file === "gitignore"){
+    // fixes issue where npm removes gitignore file during publish https://github.com/npm/npm/issues/3763
+    fs.renameSync(
+      path.join(root, "gitignore"),
+      path.join(root, ".gitignore")
+    )
+  }
 }
 
 function copy (source: string, target: string) {
