@@ -30,7 +30,7 @@ $ npm install -g @afordin/cli
 $ afordin COMMAND
 running command...
 $ afordin (--version)
-@afordin/cli/0.3.0-beta.1 win32-x64 node-v18.19.0
+@afordin/cli/0.3.0-beta.2 win32-x64 node-v20.11.1
 $ afordin --help [COMMAND]
 USAGE
   $ afordin COMMAND
