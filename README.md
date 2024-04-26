@@ -30,7 +30,7 @@ $ npm install -g @afordin/cli
 $ afordin COMMAND
 running command...
 $ afordin (--version)
-@afordin/cli/0.3.0-beta.2 win32-x64 node-v20.11.1
+@afordin/cli/0.3.0-beta.3 win32-x64 node-v20.11.1
 $ afordin --help [COMMAND]
 USAGE
   $ afordin COMMAND
@@ -87,6 +87,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`afordin create`](#afordin-create)
+* [`afordin hello PERSON`](#afordin-hello-person)
+* [`afordin hello:world`](#afordin-helloworld)
 * [`afordin help [COMMANDS]`](#afordin-help-commands)
 * [`afordin plugins`](#afordin-plugins)
 * [`afordin plugins:install PLUGIN...`](#afordin-pluginsinstall-plugin)
@@ -98,6 +101,62 @@ USAGE
 * [`afordin plugins:uninstall PLUGIN...`](#afordin-pluginsuninstall-plugin-1)
 * [`afordin plugins:uninstall PLUGIN...`](#afordin-pluginsuninstall-plugin-2)
 * [`afordin plugins:update`](#afordin-pluginsupdate)
+
+## `afordin create`
+
+Create scaffolding projects
+
+```
+USAGE
+  $ afordin create
+
+DESCRIPTION
+  Create scaffolding projects
+```
+
+_See code: [dist/commands/create/index.ts](https://github.com/afordin/cli/blob/v0.3.0-beta.3/dist/commands/create/index.ts)_
+
+## `afordin hello PERSON`
+
+Say hello
+
+```
+USAGE
+  $ afordin hello PERSON -f <value>
+
+ARGUMENTS
+  PERSON  Person to say hello to
+
+FLAGS
+  -f, --from=<value>  (required) Who is saying hello
+
+DESCRIPTION
+  Say hello
+
+EXAMPLES
+  $ oex hello friend --from oclif
+  hello friend from oclif! (./src/commands/hello/index.ts)
+```
+
+_See code: [dist/commands/hello/index.ts](https://github.com/afordin/cli/blob/v0.3.0-beta.3/dist/commands/hello/index.ts)_
+
+## `afordin hello:world`
+
+Say hello world
+
+```
+USAGE
+  $ afordin hello:world
+
+DESCRIPTION
+  Say hello world
+
+EXAMPLES
+  $ afordin hello:world
+  hello world! (./src/commands/hello/world.ts)
+```
+
+_See code: [dist/commands/hello/world.ts](https://github.com/afordin/cli/blob/v0.3.0-beta.3/dist/commands/hello/world.ts)_
 
 ## `afordin help [COMMANDS]`
 

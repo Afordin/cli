@@ -1,0 +1,30 @@
+{
+  "name": "my-vue-app-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.59.4",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vue-tsc": "^2.0.6",
+    "unocss": "^0.59.4",
+    "vite": "^5.2.0",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx eslint --fix"
+    ]
+  }
+}
