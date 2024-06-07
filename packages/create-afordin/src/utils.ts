@@ -116,8 +116,6 @@ export function getPkgManager () {
 
   if (!userAgent) return 'npm'
 
-  console.log(userAgent)
-
   const pkgSpec = userAgent.split(' ')[0]
   const pkgSpecArr = pkgSpec.split('/')
 

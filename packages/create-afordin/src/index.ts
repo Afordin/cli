@@ -143,7 +143,7 @@ export function main () {
       ],
       {
         onCancel: () => {
-          throw new Error('creación cancelada')
+          throw new Error('Generación cancelada')
         },
       },
     )
